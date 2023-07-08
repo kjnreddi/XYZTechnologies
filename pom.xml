@@ -18,6 +18,9 @@
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
 		<sonar.language>java</sonar.language>
+		<spdx.comment>SPDXTestingProject</spdx.comment>
+	        <spdx.creator>Navy</spdx.creator>
+	        <spdx.licenseId>123412312SPDXlicense</spdx.licenseId>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -71,6 +74,18 @@
 			        </execution>
 			    </executions>
 			</plugin>
+			<plugin>
+			    <groupId>org.spdx</groupId>
+			    <artifactId>spdx-maven-plugin</artifactId>
+			    <version>2.3.0</version>
+			    <executions>
+			      <execution>
+			        <goals>
+			          <goal>create</goal>
+			        </goals>
+			      </execution>
+			    </executions>
+			  </plugin>
 		</plugins>
 	</build>
 </project>
